@@ -7,9 +7,17 @@ from tkinter import messagebox
 from PIL import ImageTk, Image
 
 
+# tkinter window
+root = Tk()
+root.title('Music player project')
+root['background'] = '#000000'
+root.geometry('1500x600')
+
+
 # functions
 
 def open_folder():
+    playlist.delete(0,END)
     path = filedialog.askdirectory()
     os.chdir(path)
     songs = os.listdir(path)
@@ -54,11 +62,12 @@ def resumesong():
         messagebox.showinfo('wait','select a directory')
 
 
-# tkinter window
-root = Tk()
-root.title('Music player project')
-root['background'] = '#000000'
-root.geometry('1500x600')
+
+   
+   
+
+
+
 # pygame mixer to play music
 
 
