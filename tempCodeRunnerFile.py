@@ -1,0 +1,1 @@
+insert(END, s)
